@@ -22,8 +22,6 @@ public abstract class Environment implements Parcelable {
         Environment build();
     }
 
-    public abstract Builder toBuilder();
-
     public static Builder builder() {
         return new AutoValue_Environment.Builder();
     }
