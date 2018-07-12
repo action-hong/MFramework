@@ -23,4 +23,8 @@ public class KSApplication extends MultiDexApplication {
         this.mApplicationComponent.inject(this);
 
     }
+
+    public ApplicationComponent component() {
+        return this.mApplicationComponent;
+    }
 }
