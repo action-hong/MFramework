@@ -14,11 +14,13 @@ import com.google.gson.Gson;
 public abstract class Environment implements Parcelable {
 
     public abstract Gson gson();
+    public abstract ApiClientType apiClient();
     // more thing
 
     @AutoValue.Builder
     public interface Builder {
         Builder gson(Gson __);
+        Builder apiClient(ApiClientType __);
         Environment build();
     }
 

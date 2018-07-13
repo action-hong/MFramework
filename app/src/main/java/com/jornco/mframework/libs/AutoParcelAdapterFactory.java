@@ -23,7 +23,7 @@ public final class AutoParcelAdapterFactory implements TypeAdapterFactory {
 
         final String packageName = rawType.getPackage().getName();
         final String className = rawType.getName().substring(packageName.length() + 1).replace('$', '_');
-        final String autoParcelName = packageName + ".AutoParcel_" + className;
+        final String autoParcelName = packageName + ".AutoValue_" + className;
 
         try {
             final Class<?> autoParcelType = Class.forName(autoParcelName);

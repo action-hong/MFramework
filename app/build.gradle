@@ -54,9 +54,9 @@ dependencies {
 //    kapt 'com.github.frankiesardo:auto-parcel-processor:1.0.1'
     //    kapt 'com.github.frankiesardo:auto-parcel-processor:1.0.3'
     // rx
-    implementation 'com.squareup.retrofit2:retrofit:2.2.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.2.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
     implementation 'com.trello:rxlifecycle:0.3.0'
     implementation 'com.trello:rxlifecycle-components:0.3.0'
     implementation 'io.reactivex:rxandroid:1.2.0'

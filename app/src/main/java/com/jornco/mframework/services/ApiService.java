@@ -1,5 +1,6 @@
 package com.jornco.mframework.services;
 
+import com.jornco.mframework.libs.models.BaseEntry;
 import com.jornco.mframework.services.apiresponses.RobotModel;
 
 import java.util.List;
@@ -16,5 +17,5 @@ import rx.Observable;
 public interface ApiService {
 
     @GET("info/models/{version}/{lang}/json")
-    Observable<Response<List<RobotModel>>> getNewModels(@Path("version") int version, @Path("lang") String lang);
+    Observable<Response<BaseEntry<List<RobotModel>>>> getNewModels(@Path("version") int version, @Path("lang") String lang);
 }
