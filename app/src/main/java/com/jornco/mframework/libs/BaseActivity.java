@@ -69,6 +69,7 @@ public abstract class BaseActivity<ViewModelType extends ActivityViewModel> exte
 
         this.lifecycle.onNext(ActivityEvent.CREATE);
 
+        // 创建viewModel, or 从 savedInstanceState中恢复viewModel
         assignViewModel(savedInstanceState);
 
         this.viewModel.intent(getIntent());
