@@ -20,6 +20,7 @@ import com.jornco.mframework.libs.Environment;
 import com.jornco.mframework.libs.qualifiers.ApiRetrofit;
 import com.jornco.mframework.libs.utils.Secrets;
 import com.jornco.mframework.services.ApiService;
+import com.jornco.mframework.services.KSWebViewClient;
 import com.jornco.mframework.services.interceptors.ApiRequestInterceptor;
 import com.jornco.mframework.services.interceptors.KSRequestInterceptor;
 import com.jornco.mframework.services.interceptors.WebRequestInterceptor;
@@ -203,6 +204,11 @@ public class ApplicationModule {
     @Singleton
     static CookieManager provideCookieManager() {
         return new CookieManager();
+    }
+
+    @Provides
+    static KSWebViewClient provideKSWebViewClient() {
+        return new KSWebViewClient();
     }
 
     private static Retrofit createRetrofit(String url, Gson gson, OkHttpClient okHttpClient) {

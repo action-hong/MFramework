@@ -3,7 +3,7 @@ package com.jornco.mframework
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.jornco.mframework.ui.activities.TestActivity
+import com.jornco.mframework.ui.activities.BlocklyActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,6 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        startActivity(Intent(this, TestActivity::class.java))
+        startActivity(Intent(this, BlocklyActivity::class.java))
     }
 }
