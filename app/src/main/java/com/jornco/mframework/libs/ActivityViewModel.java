@@ -8,10 +8,9 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Pair;
 
+import com.jornco.mframework.libs.utils.ObjectUtils;
 import com.jornco.mframework.ui.data.ActivityResult;
 import com.trello.rxlifecycle.ActivityEvent;
-
-import java.util.Timer;
 
 import rx.Observable;
 import rx.subjects.PublishSubject;
@@ -26,7 +25,7 @@ public class ActivityViewModel<ViewType extends ActivityLifecycleType> {
 
     // 干嘛用的?
     private final PublishSubject<ViewType> viewChange = PublishSubject.create();
-    private final Observable<ViewType> view = this.viewChange.asObservable();
+    private final Observable<ViewType> view = this.viewChange.asObservable().filter(ObjectUtils::isNotNull);
     private CompositeSubscription subscriptions = new CompositeSubscription();
 
     private final PublishSubject<ActivityResult> mActivityResult = PublishSubject.create();
